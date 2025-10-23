@@ -1,0 +1,169 @@
+:root {
+  --primary-color: light-dark(#2f7bd3, #269930);
+}
+
+.page-header {
+  /* background-color: green; */
+  text-align: center;
+  font-size: 5vw;
+  @media screen and (max-width: 800px) {
+    font-size: 10vw;
+  }
+}
+
+main {
+  text-align: center;
+  /* background-color: green; */
+}
+
+.form-header-box-wrapper {
+  /* background-color: orange; */
+  max-width: 500px;
+  width: 100%;
+  text-align: left;
+  display: inline-block;
+  margin-bottom: 1.5em;
+}
+.form-header-box {
+  /* background-color: pink; */
+  display: flex;
+}
+.form-header {
+  text-align: left;
+  display: inline-block;
+  /* background-color: aqua; */
+  width: 100%;
+  margin: 0;
+  font-size: 1.6em;
+}
+#moon-toggle {
+  display: inline-block;
+  display: none;
+  /* background-color: yellow; */
+}
+label[for='moon-toggle'] {
+  display: inline-block;
+  /* background-color: brown; */
+  font-size: 35px;
+  margin: 0;
+  margin-top: 7px;
+}
+
+button:hover,
+option:hover,
+input[type='radio'],
+input[type='checkbox'],
+input[type='color'],
+input[type='date'],
+#city,
+select {
+  cursor: pointer;
+}
+
+label[for='city']:hover,
+label[for='birth-date']:hover,
+label[for='dominant-color-of-the-works']:hover,
+label[for='artwork-category']:hover,
+label[for='yes']:hover,
+label[for='no']:hover,
+label[for='i-agree-to-contest-rules']:hover,
+label[for='moon-toggle']:hover {
+  cursor: pointer;
+}
+
+main:has(#moon-toggle:checked) form {
+  color-scheme: dark;
+  input {
+    color-scheme: dark;
+    border: inset 2px black;
+    &[type='color'] {
+      border: solid 1px #444444;
+    }
+    &[type='radio'] {
+      color-scheme: light;
+    }
+    &[type='checkbox'] {
+      color-scheme: light;
+    }
+  }
+  select {
+    color-scheme: dark;
+    border: solid 1px #444444;
+  }
+}
+
+form {
+  /* background-color: orange; */
+  color: light-dark(black, white);
+  background-color: light-dark(white, #1c1c1c);
+  text-align: center;
+  box-sizing: border-box;
+  text-align: left;
+  display: inline-block;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 7px;
+  box-shadow: 0px 0px 10px 0px gray;
+  padding: 30px;
+  margin-bottom: 100px;
+  input {
+    background-color: light-dark(white, #383838);
+    font-size: 16px;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 0;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    border: solid 1px;
+    border-color: black;
+    background-color: none;
+  }
+  input[type='color'] {
+    /* padding: 4px 2px 4px 2px; */
+    padding: 0;
+    height: 41px;
+  }
+  input[type='radio'] {
+    display: inline;
+    width: auto;
+    margin-right: 0.5em;
+  }
+  select {
+    color-scheme: light;
+    font-size: 16px;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 0;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    border: solid 1px;
+    background-color: light-dark(white, #383838);
+  }
+  fieldset {
+    padding: 18px 0 0 15px;
+    margin: 0;
+    box-sizing: border-box;
+    border: solid 2px #cbcbcb;
+  }
+  input[type='checkbox'] {
+    display: inline-block;
+    width: auto;
+    margin-top: 20px;
+  }
+  button {
+    font-size: 16px;
+    background-color: #4caf50;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    border: none;
+    border-radius: 7px;
+    margin: 0;
+    padding: 16px;
+    &:hover {
+      background-color: #45a049;
+    }
+  }
+}

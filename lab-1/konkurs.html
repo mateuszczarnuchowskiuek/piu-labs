@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 1</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/konkurs.css" />
+  </head>
+  <body>
+    <h1>Lab 1</h1>
+    <a href="index.html">Powrót</a>
+    <main>
+      <h1 class="page-header">Konkurs</h1>
+      <div class="form-header-box-wrapper">
+        <div class="form-header-box">
+          <h2 class="form-header">
+            Zgłoszenie<br />
+            do konkursu plastycznego
+          </h2>
+          <input id="moon-toggle" name="Zmień motyw" type="checkbox" /><label
+            title="Zmień motyw"
+            for="moon-toggle"
+            >🌗</label
+          >
+        </div>
+      </div>
+      <br />
+      <form class="konkurs-form" action="https://httpbin.org/get" method="get">
+        <label for="name">Imię:</label>
+        <input type="text" name="Imię" id="name" maxlength="30" required />
+        <label for="surname">Nazwisko:</label>
+        <input
+          type="text"
+          name="Nazwisko"
+          id="surname"
+          maxlength="50"
+          required
+        />
+        <label for="email">Email:</label>
+        <input type="email" name="Email" id="email" required />
+        <label for="city">Miasto:</label>
+        <input
+          list="miasta"
+          name="Miasto"
+          id="city"
+          placeholder="Wpisz lub wybierz"
+          required
+        />
+        <label for="birth-date">Data urodzenia:</label>
+        <input type="date" name="Data urodzenia" id="birth-date" required />
+        <label for="number-of-submitted-works"
+          >Liczba zgłaszanych prac: (od 1 do 6)</label
+        >
+        <input
+          type="number"
+          name="Liczba zgłaszanych prac"
+          id="number-of-submitted-works"
+          min="1"
+          max="6"
+          step="1"
+          required
+        />
+        <label for="dominant-color-of-the-works">Kolor wiodący prac:</label>
+        <input
+          class="color-input"
+          type="color"
+          name="Kolor wiodący prac"
+          id="dominant-color-of-the-works"
+          value="#FFDD00"
+          required
+        />
+        <label for="artwork-category">Kategoria pracy:</label>
+        <select
+          list="artwork-category"
+          name="Kategoria pracy"
+          id="artwork-category"
+          required
+        >
+          <option value="" disabled selected>-- wybierz kategorię --</option>
+          <option value="Rysunek">Rysunek</option>
+          <option value="Malarstwo">Malarstwo</option>
+          <option value="Grafika cyfrowa">Grafika cyfrowa</option>
+        </select>
+        <fieldset>
+          <legend>Publikacja pracy online:</legend>
+          <input
+            type="radio"
+            name="Publikacja pracy online"
+            id="yes"
+            value="Tak"
+            required
+          /><label for="yes">Tak</label>
+          <br />
+          <input
+            type="radio"
+            name="Publikacja pracy online"
+            id="no"
+            value="Nie"
+            required
+          /><label for="no">Nie</label>
+        </fieldset>
+        <input
+          type="checkbox"
+          name="Zgadzam się na regulamin konkursu"
+          id="i-agree-to-contest-rules"
+          value="Zgadzam się na regulamin konkursu"
+        />
+        <label for="i-agree-to-contest-rules"
+          >Zgadzam się na regulamin konkursu</label
+        >
+        <button type="submit">Wyjślij zgłoszenie</button>
+
+        <datalist id="miasta">
+          <option value="Warszawa"></option>
+          <option value="Kraków"></option>
+          <option value="Gdańsk"></option>
+          <option value="Poznań"></option>
+          <option value="Wrocław"></option>
+        </datalist>
+      </form>
+    </main>
+  </body>
+</html>
