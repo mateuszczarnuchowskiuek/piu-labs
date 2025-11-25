@@ -1,0 +1,145 @@
+/* Reset stylów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+main,
+aside {
+  h1,
+  h2,
+  h3,
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+}
+
+/* --------------------------------- */
+
+:root {
+  --universal-radius: 5px;
+  --universal-padding: 20px;
+  --header-orange: #f49c11;
+  --nav-blue: #2880b9;
+  --main-white: #f4f4f4;
+  --aside-light-green: #d4efdf;
+  --footer-green: #26ae5f;
+  --margin-gray: #eeeeee;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: var(--margin-gray);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1200px;
+  @media (min-width: 1024px) {
+    grid-template-columns: 3fr 1fr;
+    header {
+      grid-column: span 2;
+    }
+    nav {
+      grid-column: span 2;
+      justify-content: flex-start;
+    }
+    aside {
+      div {
+        span {
+        }
+        ::after {
+          content: '';
+          line-height: 1.7em;
+        }
+      }
+    }
+    footer {
+      grid-column: span 2;
+    }
+  }
+}
+
+header {
+  display: flex;
+  background-color: var(--header-orange);
+  color: white;
+  font-weight: bold;
+  padding: var(--universal-padding);
+  .logo {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: var(--universal-radius);
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .logo::before {
+    content: 'Logo';
+    margin-right: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+  }
+  h1 {
+    margin-left: var(--universal-padding);
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--nav-blue);
+  color: white;
+  font-weight: bold;
+  padding-left: var(--universal-padding);
+  padding-right: var(--universal-padding);
+  a {
+    height: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  :hover {
+    background-color: #216a9b;
+  }
+  :active {
+    background-color: #194d70;
+  }
+}
+
+main {
+  padding: var(--universal-padding);
+  background-color: var(--main-white);
+}
+
+aside {
+  background-color: var(--aside-light-green);
+  padding: var(--universal-padding);
+  font-weight: bold;
+  div {
+    margin-top: 20px;
+    text-align: center;
+    span {
+      margin: 20px;
+      font-size: 3em;
+    }
+  }
+}
+
+footer {
+  background-color: var(--footer-green);
+  color: white;
+  font-weight: bold;
+  padding: var(--universal-padding);
+  text-align: center;
+}
