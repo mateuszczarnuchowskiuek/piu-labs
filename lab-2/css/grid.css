@@ -94,13 +94,43 @@ header {
 
 nav {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
   background-color: var(--nav-blue);
   color: white;
   font-weight: bold;
   padding-left: var(--universal-padding);
   padding-right: var(--universal-padding);
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+  input {
+    display: none;
+  }
+  label[for='hamburger'] {
+    display: block;
+    height: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+  label[for='cross'] {
+    display: none;
+    height: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: var(--universal-padding);
+    padding-right: var(--universal-padding);
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
   a {
+    display: none;
     height: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -108,12 +138,60 @@ nav {
     color: white;
     padding-left: 10px;
     padding-right: 10px;
+    @media (min-width: 1024px) {
+      display: block;
+    }
   }
   :hover {
     background-color: #216a9b;
   }
   :active {
     background-color: #194d70;
+  }
+}
+
+nav:has(#hamburger:checked) {
+  label[for='hamburger'] {
+    display: none;
+  }
+  label[for='cross'] {
+    display: block;
+  }
+  a {
+    display: block;
+  }
+  @media (min-width: 1024px) {
+    label[for='hamburger'] {
+      display: none;
+    }
+    label[for='cross'] {
+      display: none;
+    }
+    a {
+      display: block;
+    }
+  }
+}
+nav:has(#cross:checked) {
+  label[for='hamburger'] {
+    display: block;
+  }
+  label[for='cross'] {
+    display: none;
+  }
+  a {
+    display: none;
+  }
+  @media (min-width: 1024px) {
+    label[for='hamburger'] {
+      display: none;
+    }
+    label[for='cross'] {
+      display: none;
+    }
+    a {
+      display: block;
+    }
   }
 }
 
