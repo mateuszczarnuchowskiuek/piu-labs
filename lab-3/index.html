@@ -4,9 +4,57 @@
     <meta charset="UTF-8" />
     <title>Lab 3</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/polo.css" />
   </head>
   <body>
-    <h1>Lab 3</h1>
-    <a href="..">Powrót</a>
+    <div class="container">
+      <img class="product-photo" src="images/polo/polo_b.png" />
+      <form class="product-details">
+        <header>
+          <h3>Koszulka Polo</h3>
+          <div class="promo-banner">Promocja!</div>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+          quis adipisci maiores.
+        </p>
+        <div class="color-picker-section">
+          <div class="color-picker-box">
+            <h4>Kolor</h4>
+            <input name="Kolor" type="radio" value="Niebieski" id="niebieski" />
+            <input name="Kolor" type="radio" value="Czerwony" id="czerwony" />
+            <input name="Kolor" type="radio" value="Zielony" id="zielony" />
+            <input name="Kolor" type="radio" value="Żółty" id="zolty" />
+            <div class="color-picker">
+              <label class="color-option" for="niebieski"></label>
+              <label class="color-option" for="czerwony"></label>
+              <label class="color-option" for="zielony"></label>
+              <label class="color-option" for="zolty"></label>
+            </div>
+          </div>
+        </div>
+        <div class="size-picker-section">
+          <div class="size-picker-box">
+            <h4>Rozmiar</h4>
+            <input name="Rozmiar" type="radio" value="S" id="s" />
+            <input name="Rozmiar" type="radio" value="M" id="m" />
+            <input name="Rozmiar" type="radio" value="L" id="l" />
+            <input name="Rozmiar" type="radio" value="XL" id="xl" />
+            <div class="size-picker">
+              <label class="size-option" for="s">S</label>
+              <label class="size-option" for="m">M</label>
+              <label class="size-option" for="l">L</label>
+              <label class="size-option" for="xl">XL</label>
+            </div>
+          </div>
+        </div>
+        <div class="price-button-section">
+          <div class="price-button-box">
+            <div class="price">59,99 zł</div>
+            <button class="add-to-cart" type="submit">🛒 Do koszyka</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
