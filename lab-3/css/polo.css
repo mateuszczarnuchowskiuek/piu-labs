@@ -31,6 +31,7 @@
   background-color: white;
   content: var(--primary-product);
   border: solid 2px var(--primary-color);
+  transition: border 0.3s ease;
   width: 100%;
   height: 100%;
   max-width: 500px;
@@ -74,6 +75,7 @@
   color: white;
   padding: 5px 15px 5px 15px;
   background-color: var(--primary-color);
+  transition: background-color 0.3s ease;
   border-radius: var(--unified-radius);
 }
 
@@ -164,6 +166,10 @@ input[type='radio'] {
   width: 30px;
   height: 30px;
   outline: 2px solid black;
+  transition: border 0.3s ease, transform 0.3s ease;
+  &:hover {
+    transform: translate(0, -5px);
+  }
 }
 
 .size-picker-section {
@@ -221,6 +227,10 @@ input[type='radio'] {
   height: 40px;
   font-weight: bold;
   border: 2px solid black;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  &:hover {
+    transform: translate(0, -5px);
+  }
 }
 
 .price-button-section {
@@ -248,15 +258,81 @@ input[type='radio'] {
 .add-to-cart {
   color: white;
   background-color: var(--primary-color);
+  transition: background-color 0.3s ease;
   font-weight: bold;
   font-size: medium;
   padding: 17px 20px 17px 20px;
   border: 2px solid black;
   border-radius: var(--unified-radius);
+  transition: transform 0.3s ease;
   &:hover {
-    filter: brightness(1.2);
+    transform: scale(1.1);
   }
   &:active {
-    filter: brightness(0.8);
+    transform: scale(0.9);
+  }
+}
+
+:root:has(input[id='s']:checked) .product-photo {
+  animation: puls-s 1s ease-in-out 1;
+}
+
+:root:has(input[id='m']:checked) .product-photo {
+  animation: puls-m 1s ease-in-out 1;
+}
+
+:root:has(input[id='l']:checked) .product-photo {
+  animation: puls-l 1s ease-in-out 1;
+}
+
+:root:has(input[id='xl']:checked) .product-photo {
+  animation: puls-xl 1s ease-in-out 1;
+}
+
+@keyframes puls-s {
+  0% {
+    box-shadow: 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 0 0 30px var(--primary-color);
+  }
+  100% {
+    box-shadow: 0 0 0 transparent;
+  }
+}
+
+@keyframes puls-m {
+  0% {
+    box-shadow: 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 0 0 30px var(--primary-color);
+  }
+  100% {
+    box-shadow: 0 0 0 transparent;
+  }
+}
+
+@keyframes puls-l {
+  0% {
+    box-shadow: 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 0 0 30px var(--primary-color);
+  }
+  100% {
+    box-shadow: 0 0 0 transparent;
+  }
+}
+
+@keyframes puls-xl {
+  0% {
+    box-shadow: 0 0 0 transparent;
+  }
+  50% {
+    box-shadow: 0 0 30px var(--primary-color);
+  }
+  100% {
+    box-shadow: 0 0 0 transparent;
   }
 }
