@@ -3,10 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <title>Lab 4</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/kanban.css" />
+    <script src="js/kanban.js" defer></script>
   </head>
   <body>
     <h1>Lab 4</h1>
     <a href="..">Powrót</a>
+
+    <header class="main-header">
+      <h1>Tablica Kanban</h1>
+    </header>
+
+    <div class="board-container">
+      <div class="column" id="col-todo">
+        <div class="column-header">
+          <h2>Do zrobienia <span class="counter" id="count-todo">(0)</span></h2>
+          <div class="column-controls">
+            <button class="btn btn-add" title="Dodaj nową kartę">
+              Dodaj kartę
+            </button>
+            <button
+              class="btn btn-color-col"
+              title="Zmień kolor wszystkich kart"
+            >
+              Koloruj kolumnę
+            </button>
+            <button class="btn btn-sort" title="Sortuj alfabetycznie">
+              A↓
+            </button>
+          </div>
+        </div>
+        <div class="card-list" id="list-todo"></div>
+      </div>
+
+      <div class="column" id="col-progress">
+        <div class="column-header">
+          <h2>
+            W trakcie <span class="counter" id="count-progress">(1)</span>
+          </h2>
+          <div class="column-controls">
+            <button class="btn btn-add">Dodaj kartę</button>
+            <button class="btn btn-color-col">Koloruj kolumnę</button>
+            <button class="btn btn-sort">A↓</button>
+          </div>
+        </div>
+
+        <div class="card-list" id="list-progress">
+          <div class="card" style="background-color: #e3f2fd" data-id="demo-1">
+            <button class="btn-delete" title="Usuń kartę">&times;</button>
+
+            <div class="card-content" contenteditable="true">
+              Przykładowe zadanie. Kliknij mnie, aby edytować tekst!
+            </div>
+
+            <div class="card-actions">
+              <button class="btn-move btn-left" title="Przesuń w lewo">
+                ←
+              </button>
+              <button class="btn-card-color" title="Zmień kolor karty">
+                🎨
+              </button>
+              <button class="btn-move btn-right" title="Przesuń w prawo">
+                →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column" id="col-done">
+        <div class="column-header">
+          <h2>Zrobione <span class="counter" id="count-done">(0)</span></h2>
+          <div class="column-controls">
+            <button class="btn btn-add">Dodaj kartę</button>
+            <button class="btn btn-color-col">Koloruj kolumnę</button>
+            <button class="btn btn-sort">A↓</button>
+          </div>
+        </div>
+        <div class="card-list" id="list-done"></div>
+      </div>
+    </div>
   </body>
 </html>
